@@ -23,7 +23,7 @@ spec:
             cpu: 250m
             memory: 256Mi
         ports:
-        - containerPort: 6379
+        - containerPort: 443
           name: redis
 ---
 apiVersion: v1
@@ -32,7 +32,7 @@ metadata:
   name: azure-vote-back
 spec:
   ports:
-  - port: 6379
+  - port: 443
   selector:
     app: azure-vote-back
 ---
